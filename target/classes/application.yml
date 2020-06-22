@@ -1,0 +1,22 @@
+server:
+  port: 80
+  
+spring: 
+  datasource: 
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://192.168.73.22:3306/db2019
+    username: aaa
+    password: 123456  
+    
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.abms.entity    
+
+logging:
+  level:
+    com.abms.mapper.AbmsMapper: debug  
+    
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true  
